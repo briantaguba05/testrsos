@@ -1,0 +1,14 @@
+image: node:latest
+
+stages:
+  - deploy
+
+before_script:
+  - pwd
+  - cd /home/RSOS-runner
+  - pwd
+
+deploy:
+  stage: deploy
+  script:
+    - sh deploy-admin-staging.sh
